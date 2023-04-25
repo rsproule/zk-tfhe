@@ -1,0 +1,12 @@
+[package]
+name = "methods-guest"
+version = "0.1.0"
+edition = "2021"
+
+[workspace]
+
+[dependencies]
+# If you want to try (experimental) std support, add `features = [ "std" ]` to risc0-zkvm
+risc0-zkvm = { git = "ssh://git@github.com/risc0/risc0.git", ver = "d44aeb455426884074501709b67a5f89dd425818", default-features = false, features = [
+    "std",
+] }

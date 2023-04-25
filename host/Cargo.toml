@@ -1,0 +1,14 @@
+[package]
+name = "starter"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+methods = { path = "../methods" }
+serde = "1.0"
+risc0-zkvm = { git = "ssh://git@github.com/risc0/risc0.git", ver = "d44aeb455426884074501709b67a5f89dd425818" }
+tfhe-core = { path = "../core" }
+
+# [patch.crates-io]
+# tfhe = { version = "*", features = ["boolean", "shortint", "integer", "aarch64-unix"] }
+

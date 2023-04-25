@@ -1,0 +1,23 @@
+[package]
+name = "tfhe-core"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+serde = { version = "1.0", features = ["derive"] }
+risc0-zkp = { git = "ssh://git@github.com/risc0/risc0.git", ver = "d44aeb455426884074501709b67a5f89dd425818" }
+risc0-zkvm = { git = "ssh://git@github.com/risc0/risc0.git", ver = "d44aeb455426884074501709b67a5f89dd425818", default-features = false, features = [
+    "std",
+] }
+# distro for mac os, idk might want to to use something else for within risc 
+concrete = { version = "0.2.1", features = [
+    "booleans",
+    "shortints",
+    "integers",
+    "serde",
+] }
+# [patch.crates-io]
+# risc0-zkp = { path = "../risc0" }
+# risc0-zkvm = { path = "../risc0" }
